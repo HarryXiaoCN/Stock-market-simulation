@@ -1,6 +1,6 @@
 VERSION 5.00
 Object = "{248DD890-BB45-11CF-9ABC-0080C7E7B78D}#1.0#0"; "mswinsck.ocx"
-Begin VB.Form Form4 
+Begin VB.Form 客户端 
    BorderStyle     =   1  'Fixed Single
    Caption         =   "玩家端"
    ClientHeight    =   6060
@@ -109,7 +109,7 @@ Begin VB.Form Form4
       Width           =   1440
    End
 End
-Attribute VB_Name = "Form4"
+Attribute VB_Name = "客户端"
 Attribute VB_GlobalNameSpace = False
 Attribute VB_Creatable = False
 Attribute VB_PredeclaredId = True
@@ -134,7 +134,7 @@ End Sub
 Private Sub Form_Unload(Cancel As Integer)
 Winsock1.Close
 Local_State = 0
-Form1.Show
+欢迎.Show
 End Sub
 Private Sub Timer1_Timer()
 If Winsock1.State = 7 Then Label3.Caption = "已连接;服务器IP：" & Winsock1.RemoteHostIP Else Label3.Caption = 连接状态反馈(Winsock1.State)
@@ -144,7 +144,7 @@ Private Sub Winsock1_Close()
 Winsock1.Close
 End Sub
 Private Sub Winsock1_DataArrival(ByVal bytesTotal As Long)
-Winsock1.GetData Client_GetData_tcpTemp
-If ClientGetDataShow = True Then Form2.Text1.Text = Client_GetData_tcpTemp
-Client_GetData
+Dim 消息 As String
+Winsock1.GetData 消息
+玩家消息接收 消息
 End Sub

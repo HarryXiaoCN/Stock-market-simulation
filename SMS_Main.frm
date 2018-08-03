@@ -1,5 +1,5 @@
 VERSION 5.00
-Begin VB.Form Form1 
+Begin VB.Form 欢迎 
    BorderStyle     =   1  'Fixed Single
    Caption         =   "欢迎！"
    ClientHeight    =   1980
@@ -38,15 +38,15 @@ Begin VB.Form Form1
       Width           =   3015
    End
 End
-Attribute VB_Name = "Form1"
+Attribute VB_Name = "欢迎"
 Attribute VB_GlobalNameSpace = False
 Attribute VB_Creatable = False
 Attribute VB_PredeclaredId = True
 Attribute VB_Exposed = False
 Private Sub Command1_Click()
-If Local_State = 0 Then Form3.Show: Unload Me Else MsgBox "请先关闭当前连接！"
+If Local_State = 0 Then 服务器.Show: Unload Me Else MsgBox "请先关闭当前连接！"
 End Sub
 
 Private Sub Command2_Click()
-If Local_State = 0 Then Form4.Show: Unload Me Else MsgBox "请先关闭当前连接！"
+If Local_State = 0 Then 客户端.Show: Unload Me Else MsgBox "请先关闭当前连接！"
 End Sub

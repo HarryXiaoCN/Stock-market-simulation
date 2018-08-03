@@ -10,3 +10,7 @@ Public Type 公司
     总股数 As Currency
     流通股数 As Currency
 End Type
+Public Type 情报
+    存在 As Boolean
+    好坏度 As String
+End Type

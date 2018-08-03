@@ -1,6 +1,6 @@
 VERSION 5.00
 Object = "{248DD890-BB45-11CF-9ABC-0080C7E7B78D}#1.0#0"; "mswinsck.ocx"
-Begin VB.Form Form3 
+Begin VB.Form 服务器 
    BorderStyle     =   1  'Fixed Single
    Caption         =   "主持人端"
    ClientHeight    =   4440
@@ -61,20 +61,21 @@ Begin VB.Form Form3
       Width           =   1200
    End
 End
-Attribute VB_Name = "Form3"
+Attribute VB_Name = "服务器"
 Attribute VB_GlobalNameSpace = False
 Attribute VB_Creatable = False
 Attribute VB_PredeclaredId = True
 Attribute VB_Exposed = False
 Private Sub Command1_Click()
-Form2.Show
+游戏初始化
+主持人.Show
 End Sub
 Private Sub Form_Load()
 Local_State = 1
 Winsock1(0).Listen
 End Sub
 Private Sub Form_Unload(Cancel As Integer)
-Local_State = 0: TCPNum = 0: Form1.Show
+Local_State = 0: TCPNum = 0: 欢迎.Show
 End Sub
 Private Sub OlTime_Timer()
 For i = 1 To TCPNum

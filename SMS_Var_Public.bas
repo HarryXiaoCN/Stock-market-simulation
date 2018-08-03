@@ -1,7 +1,15 @@
 Attribute VB_Name = "SMS_Var_Public"
 Public 股民(15) As 玩家
+Public 我 As 玩家
 Public GitHub As 公司
+Public 消息池(4, 1000) As 情报
+Public 操作权限 As Boolean
+Public 操作详情, 当前阶段, 当前回合, 操作身份 As String
 Public Function 游戏初始化()
+当前回合 = 1
+当前阶段 = "准备阶段"
+操作身份 = "庄家"
+游戏初始化_主持人状态消息发送
 玩家初始化
 公司初始化
 End Function
