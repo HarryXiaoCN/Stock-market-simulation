@@ -2,7 +2,8 @@ Attribute VB_Name = "SMS_Var_Public"
 Public 股民(15) As 玩家
 Public 我 As 玩家
 Public GitHub As 公司
-Public 消息池(4, 1000) As 情报
+Public 个股消息池(4, 1000) As 情报
+Public 大盘消息池(4, 1000) As 情报
 Public 操作权限 As Boolean
 Public 操作详情, 当前阶段, 当前回合, 操作身份 As String
 Public Function 游戏初始化()
@@ -57,9 +58,7 @@ End Function
 Public Function 公司初始化()
 With GitHub
     .流通股数 = 20000
-    .流通市值 = 20000
     .总股数 = 30000
-    .总市值 = 30000
 End With
 End Function
 

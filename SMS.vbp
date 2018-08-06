@@ -1,7 +1,7 @@
 Type=Exe
 Form=SMS_Main.frm
-Reference=*\G{00020430-0000-0000-C000-000000000046}#2.0#0#..\..\..\..\..\..\Windows\system32\stdole2.tlb#OLE Automation
-Object={248DD890-BB45-11CF-9ABC-0080C7E7B78D}#1.0#0; mswinsck.ocx
+Reference=*\G{00020430-0000-0000-C000-000000000046}#2.0#0#C:\Windows\SysWOW64\stdole2.tlb#OLE Automation
+Object={248DD890-BB45-11CF-9ABC-0080C7E7B78D}#1.0#0; MSWINSCK.OCX
 Form=SMS_Server.frm
 Form=SMS_Client.frm
 Module=SMS_online; SMS_online.bas
@@ -10,6 +10,7 @@ Module=SMS_Type; SMS_Type.bas
 Module=SMS_Var_Public; SMS_Var_Public.bas
 Module=SMS_WorldRuler; SMS_WorldRuler.bas
 Form=SMS_Banker.frm
+Form=SMS_RunChart.frm
 IconForm="»¶Ó­"
 Startup="»¶Ó­"
 Command32=""
